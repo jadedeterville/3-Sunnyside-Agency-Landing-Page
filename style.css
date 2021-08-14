@@ -1,6 +1,10 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
 
+:root {
+  --neutral-background: #fffbf8;
+}
+
 /* Standard setup */
 * {
   margin: 0;
@@ -8,9 +12,106 @@
   box-sizing: border-box;
 }
 
-/* .wrapper {
+/* So that all images don't go bigger than their containers */
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Showcase and Navigation */
+
+.showcase {
+  background: url('../img/desktop/image-header.jpg') no-repeat center
+    center/cover;
+  /* background-image: url('../img/icon-arrow-down.svg'); */
+  height: 100vh;
+  position: relative;
+}
+
+.showcase #down-arrow {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 3rem;
+}
+
+.nav-item a {
+  font-family: 'Barlow', sans-serif;
+  color: #fff;
+}
+
+.nav-item:first-child {
+  margin-right: auto;
+  margin-left: 2rem;
+  font-size: 1.7rem;
+}
+
+.showcase #main-title {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: 'Fraunces', serif;
+  font-size: 4rem;
+  letter-spacing: 0.1em;
+  margin-top: 150px;
+}
+
+/* Six Boxes */
+
+.grid-container1 {
   display: grid;
-} */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    'transform-para       transform-img'
+    'standout-img        standout-para'
+    'graphic-design      photography';
+  height: 250vh;
+}
+
+/* START WITH THIS */
+.transform-para {
+  background: var(--neutral-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.transform-img {
+  background: url(../img/desktop/image-transform.jpg) no-repeat center
+    center/cover;
+}
+
+.standout-img {
+  background: url(../img/desktop/image-stand-out.jpg) no-repeat center
+    center/cover;
+}
+
+.graphic-design {
+  background: url(../img/desktop/image-graphic-design.jpg) no-repeat center
+    center/cover;
+}
+
+.photography {
+  background: url(../img/desktop/image-photography.jpg) no-repeat center
+    center/cover;
+}
 
 /* Feel free to remove these styles or customise in your own stylesheet 👍
   <style>
