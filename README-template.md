@@ -1,3 +1,7 @@
+Save this: https://stackoverflow.com/questions/45536537/centering-in-css-grid
+
+And this: https://codepen.io/keithjgrant/pen/JNGNKX
+
 # Frontend Mentor - Sunnyside agency landing page solution
 
 This is a solution to the [Sunnyside agency landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/sunnyside-agency-landing-page-7yVs3B6ef). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
@@ -77,7 +81,7 @@ To see how you can add code snippets, see below:
 
 ```js
 const proudOfThisFunc = () => {
-  console.log("🎉");
+  console.log('🎉');
 };
 ```
 

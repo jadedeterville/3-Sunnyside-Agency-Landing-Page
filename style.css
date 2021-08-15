@@ -3,6 +3,11 @@
 
 :root {
   --neutral-background: #fffbf8;
+  --primary-gray: #262f3a;
+  --p-text: hsl(232, 10%, 55%);
+  --graphic-color: hsl(167, 40%, 24%);
+  --photography-color: hsl(198, 62%, 26%);
+  --footer-color: hsl(168, 34%, 41%);
 }
 
 /* Standard setup */
@@ -19,6 +24,7 @@ img {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* Showcase and Navigation */
@@ -60,6 +66,19 @@ a {
   font-size: 1.7rem;
 }
 
+.nav-item:last-child a {
+  font-family: 'Fraunces', serif;
+  color: var(--primary-gray);
+  text-transform: uppercase;
+  background: #fff;
+  border-radius: 25px;
+  padding: 10px 20px 10px 20px;
+}
+
+.nav-item:last-child a:hover {
+  opacity: 0.4;
+}
+
 .showcase #main-title {
   display: flex;
   justify-content: center;
@@ -74,23 +93,60 @@ a {
 
 /* Six Boxes */
 
-.grid-container1 {
+.grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-rows: 1fr 1fr 1fr 1.1fr 0.5fr 0.3fr; */
+  grid-template-rows: auto;
   grid-template-areas:
     'transform-para       transform-img'
     'standout-img        standout-para'
-    'graphic-design      photography';
-  height: 250vh;
+    'graphic-design      photography'
+    'testimonials        testimonials'
+    'footer-milk footer-orange footer-cone footer-sugar'
+    'main-footer main-footer';
+  height: 450vh;
 }
 
-/* START WITH THIS */
+h2,
+h3,
+.cta {
+  font-family: 'Fraunces', serif;
+}
+
+h2,
+.cta {
+  color: var(--primary-gray);
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+p {
+  font-family: 'Barlow', sans-serif;
+  font-size: 18px;
+  color: var(--p-text);
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+.cta {
+  text-transform: uppercase;
+}
+
+/* Needs fixing so that background spans the container */
 .transform-para {
   background: var(--neutral-background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-size: cover;
+  place-self: center;
+}
+
+.transform-para h2,
+.transform-para p,
+.transform-para a {
+  text-align: left;
+  padding: 0px 150px 0px 150px;
 }
 
 .transform-img {
@@ -103,9 +159,42 @@ a {
     center/cover;
 }
 
+.standout-para {
+  background: var(--neutral-background);
+  overflow: hidden;
+  text-align: left;
+  place-self: center;
+  padding: 0px 150px 0px 150px;
+}
+
+.graphic-header,
+.photography-header {
+  font-size: 2rem;
+}
+
+.graphic-header {
+  color: var(--graphic-color);
+}
+
+.photography-header {
+  color: var(--photography-color);
+}
+
 .graphic-design {
   background: url(../img/desktop/image-graphic-design.jpg) no-repeat center
     center/cover;
+}
+
+.graphic-design h2,
+.graphic-design p {
+  place-self: center;
+  text-align: center;
+  padding: 0px 150px 0px 150px;
+}
+
+.graphic-design h2 {
+  margin-top: 330px;
+  margin-bottom: 25px;
 }
 
 .photography {
@@ -113,11 +202,61 @@ a {
     center/cover;
 }
 
-/* Feel free to remove these styles or customise in your own stylesheet 👍
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style> */
+.photography h2,
+.photography p {
+  place-self: center;
+  text-align: center;
+  padding: 0px 150px 0px 150px;
+}
+
+.photography h2 {
+  margin-top: 330px;
+  margin-bottom: 25px;
+}
+
+/* Testimonials */
+
+.testimonials {
+  display: flex;
+  background: var(--neutral-background);
+}
+
+.testimonials h3,
+.name {
+  font-family: 'Fraunces', serif;
+}
+
+.testimonials img {
+  border-radius: 50%;
+}
+
+/* Footer Images */
+
+.footer-milk {
+  background: url(../img/desktop/image-gallery-milkbottles.jpg) no-repeat center
+    center/cover;
+}
+
+.footer-orange {
+  background: url(../img/desktop/image-gallery-orange.jpg) no-repeat center
+    center/cover;
+}
+
+.footer-cone {
+  background: url(../img/desktop/image-gallery-cone.jpg) no-repeat center
+    center/cover;
+}
+
+.footer-sugar {
+  background: url(../img/desktop/image-gallery-sugarcubes.jpg) no-repeat center
+    center/cover;
+}
+
+/* Footer */
+
+.main-footer {
+  background: var(--footer-color);
+}
 
 /* 
   font-family: 'Barlow', sans-serif;
