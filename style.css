@@ -98,14 +98,12 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 650px 650px 650px 700px 300px 200px;
-  /* grid-template-rows: 0.6fr 0.6fr 0.6fr 0.6fr 0.4fr 0.2fr; */
-  /* grid-template-rows: auto; */
   grid-template-areas:
     'transform-para       transform-img'
     'standout-img        standout-para'
     'graphic-design      photography'
     'testimonials testimonials'
-    /* 'footer-milk footer-orange footer-cone footer-sugar' */
+    'gallery gallery'
     'main-footer main-footer';
   height: 450vh;
 }
@@ -208,6 +206,7 @@ p {
   place-self: center;
   text-align: center;
   padding: 0px 150px 0px 150px;
+  color: var(--graphic-color);
 }
 
 .graphic-design h2 {
@@ -226,6 +225,7 @@ p {
   place-self: center;
   text-align: center;
   padding: 0px 150px 0px 150px;
+  color: var(--photography-color);
 }
 
 .photography h2 {
@@ -257,8 +257,9 @@ p {
   color: var(--primary-gray);
 }
 
-.title {
+.testimonials .title {
   margin-top: -50px;
+  margin-bottom: 120px;
 }
 
 .testimonials h3 {
@@ -276,31 +277,16 @@ p {
   width: 400px;
 }
 
-/* Footer Images */
+/* Footer Gallery Images */
 
-/* .footer-milk {
-  grid-area: footer-milk;
-  background: url(../img/desktop/image-gallery-milkbottles.jpg) no-repeat center
-    center/cover;
+.gallery {
+  grid-area: gallery;
+  display: flex;
 }
 
-.footer-orange {
-  grid-area: footer-orange;
-  background: url(../img/desktop/image-gallery-orange.jpg) no-repeat center
-    center/cover;
+.gallery-images img {
+  max-width: 417px;
 }
-
-.footer-cone {
-  grid-area: footer-cone;
-  background: url(../img/desktop/image-gallery-cone.jpg) no-repeat center
-    center/cover;
-}
-
-.footer-sugar {
-  grid-area: footer-sugar;
-  background: url(../img/desktop/image-gallery-sugarcubes.jpg) no-repeat center
-    center/cover;
-} */
 
 /* Footer */
 
