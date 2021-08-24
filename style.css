@@ -92,12 +92,12 @@ a {
   margin-top: 150px;
 }
 
-/* Six Boxes */
+/* Grid container for the six boxes and below */
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 650px 650px 650px 700px 300px 200px;
+  grid-template-rows: 650px 650px 650px 700px 525px 300px;
   grid-template-areas:
     'transform-para       transform-img'
     'standout-img        standout-para'
@@ -105,7 +105,6 @@ a {
     'testimonials testimonials'
     'gallery gallery'
     'main-footer main-footer';
-  height: 450vh;
 }
 
 h2,
@@ -281,11 +280,15 @@ p {
 
 .gallery {
   grid-area: gallery;
+}
+.gallery-images {
   display: flex;
+  flex-direction: row;
 }
 
 .gallery-images img {
-  max-width: 417px;
+  max-width: auto;
+  max-height: 525px;
 }
 
 /* Footer */
@@ -293,6 +296,45 @@ p {
 .main-footer {
   grid-area: main-footer;
   background: var(--footer-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.main-footer h4 {
+  padding-bottom: 30px;
+  font-family: 'Barlow', sans-serif;
+  font-size: 30px;
+  color: var(--graphic-color);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.main-footer a {
+  color: var(--graphic-color);
+  font-family: 'Barlow', sans-serif;
+}
+
+.main-footer a:hover {
+  color: #fff;
+}
+
+.main-footer ul {
+  list-style: none;
+}
+
+/* Still need to sort the SVG styling and mobile responsiveness */
+
+.social {
+  padding-top: 60px;
 }
 
 /* 
