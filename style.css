@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 /* So that all images don't go bigger than their containers */
 img {
   max-width: 100%;
