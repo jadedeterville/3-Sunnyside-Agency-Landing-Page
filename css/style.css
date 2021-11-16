@@ -9,6 +9,8 @@
   --photography-color: hsl(198, 62%, 26%);
   --light-gray: hsl(210, 4%, 67%);
   --footer-color: hsl(168, 34%, 41%);
+  --softRed: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
 }
 
 /* Standard setup */
@@ -16,6 +18,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -37,7 +43,6 @@ a {
 .showcase {
   background: url('../img/desktop/image-header.jpg') no-repeat center
     center/cover;
-  /* background-image: url('../img/icon-arrow-down.svg'); */
   height: 100vh;
   position: relative;
 }
@@ -100,8 +105,8 @@ a {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 650px 650px 650px 700px 525px 300px;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  grid-template-rows: 650px 650px 650px 700px auto 300px;
   grid-template-areas:
     'transform-para       transform-img'
     'standout-img        standout-para'
@@ -136,6 +141,30 @@ p {
 
 .cta {
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+  padding: 0 0.5em;
+  margin-bottom: 1em;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  bottom: 23px;
+  left: 140px;
+  height: 0.65em;
+  width: 130px;
+  z-index: -1;
+  border-radius: 2em;
+  opacity: 0.3;
+}
+
+.cta-yellow::after {
+  background-color: var(--yellow);
+}
+
+.cta-softred::after {
+  background-color: var(--softRed);
 }
 
 /* Needs fixing so that background spans the container */
@@ -146,7 +175,7 @@ p {
   place-self: center;
   padding-top: 175px;
   height: 100%;
-  width: 100%;
+  max-width: 50vw;
 }
 
 .transform-para h2,
@@ -160,6 +189,7 @@ p {
   grid-area: transform-img;
   background: url(../img/desktop/image-transform.jpg) no-repeat center
     center/cover;
+  max-width: 50vw;
 }
 
 .standout-img {
@@ -175,7 +205,7 @@ p {
   place-self: center;
   padding-top: 175px;
   height: 100%;
-  width: 100%;
+  max-width: 50vw;
 }
 
 .standout-para h2,
@@ -208,7 +238,7 @@ p {
 .graphic-design p {
   place-self: center;
   text-align: center;
-  padding: 0px 150px 0px 150px;
+  padding: 0px 130px 0px 130px;
   color: var(--graphic-color);
 }
 
@@ -221,13 +251,14 @@ p {
   grid-area: photography;
   background: url(../img/desktop/image-photography.jpg) no-repeat center
     center/cover;
+  max-width: 50vw;
 }
 
 .photography h2,
 .photography p {
   place-self: center;
   text-align: center;
-  padding: 0px 150px 0px 150px;
+  padding: 0px 130px 0px 130px;
   color: var(--photography-color);
 }
 
@@ -291,8 +322,8 @@ p {
 }
 
 .gallery-images img {
-  max-width: auto;
-  max-height: 525px;
+  width: 100%;
+  height: 100%;
 }
 
 /* Footer */
@@ -339,6 +370,7 @@ p {
 
 .social {
   padding-top: 60px;
+  padding-bottom: 15px;
 }
 
 /* 
