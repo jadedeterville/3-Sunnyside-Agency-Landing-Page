@@ -1,20 +1,77 @@
-/* test so we know everything is working */
+/* we are creatives styling*/
 .showcase #main-title {
   color: hotpink;
   justify-self: center;
   text-align: center;
+  margin-top: 50px;
+  font-size: 3.5rem;
 }
 
-/* edited grid containers */
+/* Hamburger */
+
+.hamburger {
+  display: block;
+  /* margin-top: 50px;
+  margin-left: 38px;
+  margin-right: 35px; */
+  cursor: pointer;
+}
+
+li.nav-item {
+  display: block;
+  margin: 35px;
+}
+
+li.nav-item a {
+  text-decoration: none;
+  color: var(--p-text);
+}
+
+.nav-item:last-child a {
+  color: var(--primary-gray);
+  background: var(--yellow);
+}
+
+ul.nav-list {
+  list-style-type: none;
+  margin: 40px;
+  padding: 0;
+  width: 80%;
+  background-color: white;
+  z-index: 1;
+  position: absolute;
+  top: 60px;
+}
+ul.nav-list::before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 35px solid white;
+  border-left: 38px solid transparent;
+  border-right: 0px solid transparent;
+  top: -32px;
+
+  right: 0px;
+}
+
+ul.nav-list.active {
+  display: block;
+}
+ul.nav-list {
+  display: none;
+}
+
+/* responsive grid containers */
 .grid-container {
   display: grid;
   grid-template-columns: none;
-  grid-template-rows: 650px 650px 650px 700px auto 300px;
+  grid-template-rows: 450px 450px 450px 450px 600px 600px auto auto 300px;
   grid-template-areas:
     'transform-img'
     'transform-para'
-    'standout-para'
     'standout-img'
+    'standout-para'
     'graphic-design'
     'photography'
     'testimonials'
@@ -29,20 +86,33 @@ p {
   font-size: 16px;
 }
 
+/* line/cta styling */
+
+.cta::after {
+  bottom: 25px;
+  left: 43px;
+}
+
+/* individual grid items styling */
+
+h2 {
+  font-size: 3rem;
+}
+
 .transform-img {
   grid-area: transform-img;
   background: url(../img/desktop/image-transform.jpg) no-repeat center
     center/cover;
-  background-attachment: fixed;
   height: 100%;
   max-width: 100%;
 }
 
-/* start here - figure out how to prevent th eoverflow etc */
-
 .transform-para {
   grid-area: transform-para;
-  place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding-top: 15px;
   height: 100%;
   max-width: 100%;
@@ -51,83 +121,72 @@ p {
 .transform-para h2,
 .transform-para p,
 .transform-para a {
-  text-align: left;
-  padding: 10px 10px 25px 50px;
+  text-align: center;
+  padding: 20px 50px;
 }
 
 .standout-img {
   grid-area: standout-img;
   background: url(../img/desktop/image-stand-out.jpg) no-repeat center
     center/cover;
+  height: 100%;
+  max-width: 100%;
 }
 
 .standout-para {
-  grid-area: standout-para;
-  background: var(--neutral-background);
-  background-size: contain;
-  place-self: center;
-  padding-top: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 15px;
   height: 100%;
-  max-width: 50vw;
+  max-width: 100%;
 }
 
 .standout-para h2,
 .standout-para p,
 .standout-para a {
-  text-align: left;
-  padding: 10px 150px 25px 150px;
+  text-align: center;
+  padding: 30px 50px;
 }
 
 .graphic-header,
 .photography-header {
-  font-size: 2rem;
-}
-
-.graphic-header {
-  color: var(--graphic-color);
-}
-
-.photography-header {
-  color: var(--photography-color);
+  font-size: 1.5rem;
 }
 
 .graphic-design {
   grid-area: graphic-design;
   background: url(../img/desktop/image-graphic-design.jpg) no-repeat center
     center/cover;
+  height: 100%;
+  max-width: 100%;
 }
 
 .graphic-design h2,
 .graphic-design p {
-  place-self: center;
-  text-align: center;
-  padding: 0px 130px 0px 130px;
-  color: var(--graphic-color);
+  padding: 10px 30px;
 }
 
 .graphic-design h2 {
-  margin-top: 375px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 .photography {
-  grid-area: photography;
   background: url(../img/desktop/image-photography.jpg) no-repeat center
     center/cover;
   max-width: 50vw;
+  height: 100%;
+  max-width: 100%;
 }
 
 .photography h2,
 .photography p {
-  place-self: center;
-  text-align: center;
-  padding: 0px 130px 0px 130px;
-  color: var(--photography-color);
+  padding: 10px 30px;
 }
 
 .photography h2 {
-  margin-top: 375px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* Testimonials */
@@ -147,6 +206,11 @@ p {
   margin-bottom: 130px;
 }
 
+.testimonials p {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 /* Footer Gallery Images */
 
 .gallery {
@@ -161,51 +225,4 @@ p {
 .gallery-images img {
   width: 50%;
   height: 50%;
-}
-
-/* Footer */
-
-.main-footer {
-  grid-area: main-footer;
-  background: var(--footer-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 300px;
-}
-
-.main-footer h4 {
-  padding-bottom: 30px;
-  font-family: 'Barlow', sans-serif;
-  font-size: 30px;
-  color: var(--graphic-color);
-}
-
-.footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-  width: 300px;
-}
-
-.main-footer a {
-  color: var(--graphic-color);
-  font-family: 'Barlow', sans-serif;
-}
-
-.main-footer a:hover {
-  color: #fff;
-}
-
-.main-footer ul {
-  list-style: none;
-}
-
-/* Still need to sort the SVG styling and mobile responsiveness */
-
-.social {
-  padding-top: 60px;
-  padding-bottom: 15px;
 }
