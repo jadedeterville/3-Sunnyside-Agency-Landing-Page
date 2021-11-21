@@ -132,61 +132,35 @@ p {
 
 /* Testimonials */
 
-.testimonials {
-  grid-area: testimonials;
-  background: var(--neutral-background);
-}
-
 .tesimonial-contacts {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  height: 100%;
-}
-
-.testimonials h3,
-.name {
-  font-family: 'Fraunces', serif;
-}
-
-.name {
-  color: var(--primary-gray);
-}
-
-.testimonials .title {
-  margin-top: -50px;
-  margin-bottom: 120px;
-}
-
-.testimonials h3 {
-  color: var(--light-gray);
-  text-transform: uppercase;
-  text-align: center;
-  padding-top: 100px;
+  flex-flow: row wrap;
 }
 
 .testimonials img {
   border-radius: 50%;
+  height: 100px;
+  margin-top: -150px;
 }
 
-.testimonial-text {
-  width: 400px;
+.testimonials h3 {
+  margin-bottom: 130px;
 }
 
 /* Footer Gallery Images */
 
 .gallery {
-  grid-area: gallery;
+  margin-top: 100px;
 }
+
 .gallery-images {
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
 }
 
 .gallery-images img {
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 }
 
 /* Footer */
