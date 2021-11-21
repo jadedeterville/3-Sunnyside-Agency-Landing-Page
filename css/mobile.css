@@ -9,6 +9,10 @@
 
 /* Hamburger */
 
+.logo a {
+  display: none;
+}
+
 .hamburger {
   display: block;
   /* margin-top: 50px;
@@ -42,6 +46,7 @@ ul.nav-list {
   position: absolute;
   top: 60px;
 }
+
 ul.nav-list::before {
   content: ' ';
   position: absolute;
@@ -58,6 +63,7 @@ ul.nav-list::before {
 ul.nav-list.active {
   display: block;
 }
+
 ul.nav-list {
   display: none;
 }
