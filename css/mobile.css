@@ -56,7 +56,6 @@ ul.nav-list::before {
   border-left: 38px solid transparent;
   border-right: 0px solid transparent;
   top: -32px;
-
   right: 0px;
 }
 
