@@ -1,6 +1,5 @@
 /* we are creatives styling*/
 .showcase #main-title {
-  color: hotpink;
   justify-self: center;
   text-align: center;
   margin-top: 50px;
@@ -9,16 +8,10 @@
 
 /* Hamburger */
 
-.logo a {
-  display: none;
-}
-
 .hamburger {
   display: block;
-  /* margin-top: 50px;
-  margin-left: 38px;
-  margin-right: 35px; */
   cursor: pointer;
+  width: 30px;
 }
 
 li.nav-item {
@@ -38,13 +31,13 @@ li.nav-item a {
 
 ul.nav-list {
   list-style-type: none;
-  margin: 40px;
   padding: 0;
-  width: 80%;
-  background-color: white;
+  width: 40%;
+  background-color: #fff;
   z-index: 1;
   position: absolute;
   top: 60px;
+  /* text-align: center; */
 }
 
 ul.nav-list::before {
